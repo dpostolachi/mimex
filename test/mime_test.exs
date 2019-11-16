@@ -31,12 +31,15 @@ defmodule MimeTest do
     binary = IO.binread( file, @chunk_size )
     assert Mime.check_image( binary ) == :png
 
-    # TIFF
+    # WEBP
     { :ok, file } = File.open( @webp_file )
     binary = IO.binread( file, @chunk_size )
     assert Mime.check_image( binary ) == :webp
 
-    # WEBP
+    # TIFF
+    { :ok, file } = File.open( @tiff_file )
+    binary = IO.binread( file, @chunk_size )
+    assert Mime.check_image( binary ) == :tiff
 
   end
 end

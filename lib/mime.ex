@@ -11,8 +11,8 @@ defmodule Mime do
       << 137, 80, 78, 71 >> -> :png #PNG
       << 255, 216, 255, 224 >> -> :jpeg #JPEG
       << 255, 216, 255, 225 >> -> :jpeg #JPEG
-      << 73, 73, 42, _ >> -> :tif #TIFF
-      << 77, 77, 43, _ >> -> :tif #TIFF
+      << 73, 73, 42, _ >> -> :tiff #TIFF
+      << 77, 77, 43, _ >> -> :tiff #TIFF
     end
   end
 
